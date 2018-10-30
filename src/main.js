@@ -1,1 +1,1 @@
-alert('Hello, webpack!');
+require("./main.css");
