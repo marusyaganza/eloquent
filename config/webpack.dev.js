@@ -10,7 +10,8 @@ module.exports = {
 		publicPath: "/"
 	},
 	devServer: {
-		contentBase: "dist"
+		contentBase: "dist",
+		overlay: true
 	},
 	module: {
 		rules: [
@@ -25,6 +26,37 @@ module.exports = {
 					}
 				]
 
+			},
+			{
+				test: /\.html$/,
+				use: [
+					{
+						loader: "html-loader",
+						options: {
+							attrs: ["img:src"]
+						}
+					},
+					{
+						loader: "extract-loader"
+					},
+					{
+						loader: "file-loader",
+						options: {
+							name: "[name].html"
+						}
+					}
+				]
+			},
+			{
+				test: /\.(jpg|gif|png)$/,
+				use: [
+					{
+						loader: "file-loader",
+						options: {
+							name: "images/[name].[ext]"
+						}
+					}
+				]
 			}
 		]
 	}
