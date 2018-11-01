@@ -22,7 +22,7 @@ module.exports = {
 						loader: "babel-loader"
 					}
 				],
-				exclude: /node-modules/
+				exclude: /node_modules/
 			},
 			{
 				test: /\.css$/,
