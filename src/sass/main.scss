@@ -1,15 +1,10 @@
+@import "profile";
+$base-color: #444;
 body {
     margin: 0;
-    background: #444;
+    background: $base-color;
 }
-.profile {
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    height:100vh;
-    flex-flow: column;
-}
+
 img {
     border-radius: 100%;
     width: 300px;
