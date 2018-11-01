@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.dev.js",
-    "serv": "nodemon --watch config --watch src/server src/server/main.js"
+    "serv": "nodemon --inspect --watch config --watch src/server src/server/main.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
     "express": "^4.16.4",
     "extract-loader": "^3.0.0",
@@ -26,6 +27,9 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "nodemon": "^1.18.5",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-hot-loader": "^4.3.11",
     "rxjs": "^5.5.12",
     "style-loader": "^0.23.1",
     "webpack": "^4.23.1",

@@ -19,7 +19,8 @@ module.exports = {
 		},
 		hot: true
 },
-module: {
+	devtool: "source-map",
+	module: {
 	rules: [
 		{
 			test: /\.js/,
