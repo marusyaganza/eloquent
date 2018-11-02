@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.dev.js",
-    "serv": "nodemon --watch config --watch src/server src/server/main.js"
+    "serv": "nodemon --watch config --watch src/server src/server/main.js",
+    "prod": "node src/server/main.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^1.0.1",
+    "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "extract-loader": "^3.0.0",
     "file-loader": "^2.0.0",

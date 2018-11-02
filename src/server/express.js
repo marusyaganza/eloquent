@@ -19,6 +19,8 @@ server.use(webpackMiddleware);
 server.use(webpackHotMiddleware);
 server.use(staticMiddleware);
 
-server.listen(8000, () => {
-	console.log('server is listening');
+const PORT = process.env.PORT || 8000;
+
+server.listen(PORT, () => {
+	console.log(`server is listening on localhost:${PORT}`);
 });
