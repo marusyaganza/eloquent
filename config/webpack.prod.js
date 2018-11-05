@@ -72,13 +72,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCSSExtractPlugin(),
-        new OptimizeCSSAssetsPlugin({
-            assetNameRegExp: /\.css$/g,
-            cssProcessor: require("cssnano"),
-            cssProcessorOptions: { discardComments: { removeAll: true } },
-            canPrint: true
+        new MiniCSSExtractPlugin({
+            filename: "[name]-[contenthash].css"
         }),
+        new OptimizeCSSAssetsPlugin(),
         new HTMLWebpackPlugin({
             template: "./src/index.html",
             inject: false
