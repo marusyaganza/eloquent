@@ -2,14 +2,16 @@ body {
     margin: 0;
     background: #444;
 }
+
 .profile {
     display: flex;
     color: white;
     align-items: center;
     justify-content: center;
-    height:100vh;
+    height: 100vh;
     flex-flow: column;
 }
+
 img {
     border-radius: 100%;
     width: 300px;
@@ -19,7 +21,13 @@ img {
 h1 {
     color: white;
     font-size: 5em;
-    font-family:sans-serif;
+    font-family: sans-serif;
     text-shadow: 0 0 20px #000;
+}
+
+a {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
