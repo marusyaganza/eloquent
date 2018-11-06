@@ -1,8 +1,10 @@
 const path = require("path");
 const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
-MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+// const MinifyPlugin = require("babel-minify-webpack-plugin");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = env => {
 	return {
 		entry: {
@@ -80,7 +82,9 @@ module.exports = env => {
 				'process.env': {
 					'NODE_ENV': JSON.stringify(env.NODE_ENV)
 				}
-			})
+			}),
+			// new MinifyPlugin()
+			new UglifyJSPlugin()
 		]
 	}
 
