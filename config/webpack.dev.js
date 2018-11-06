@@ -3,7 +3,11 @@ const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
 	entry: {
-		main: "./src/main.js"
+		main: [
+			"babel-runtime/regenerator",
+			"webpack-hot-middleware/client?reload=true",
+			"./src/main.js"
+			]
 	},
 	mode: "development",
 	output: {
