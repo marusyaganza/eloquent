@@ -5,6 +5,8 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const BrotliPlugin = require("brotli-webpack-plugin");
 module.exports = env => {
 	return {
 		entry: {
@@ -84,7 +86,11 @@ module.exports = env => {
 				}
 			}),
 			// new MinifyPlugin()
-			new UglifyJSPlugin()
+			new UglifyJSPlugin(),
+			new CompressionPlugin({
+				algorithm: "gzip"
+			}),
+			new BrotliPlugin()
 		]
 	}
 
